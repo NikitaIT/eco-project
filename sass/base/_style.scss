@@ -1,0 +1,53 @@
+/*normalize*/
+a,a:hover { text-decoration: none;}
+ul,ol{list-style: none;}
+.clearfix:before,
+.clearfix:after {
+ content: " ";
+ display: table;
+}
+.clearfix:after {clear: both;overflow: auto;}
+.left {float: left;}
+.right {float:right;}
+*{
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+.container {
+  margin: 0 auto;
+  padding: 20px;
+}
+.wrapper{
+  background-color: #cccccc;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 50px;
+}
+.mb-20{
+  margin-bottom: 20px;
+}
+
+.list-row li{
+  float: right;
+}
+figure{margin: 0;}
+@media (max-width:1110px){
+  .nav ul.right{display: none;}
+}
+@media (max-width:780px){
+  .nav{display: none;}
+  .header{background: none;}
+  .header-logo{
+    float: none;
+    width: 90px;
+    margin: 0 auto;
+  }
+  .header-logo img{width: 100%;}
+}
+.centr{
+  display: block;
+  width: auto;
+  height: auto;
+  margin: 0 auto;
+}
