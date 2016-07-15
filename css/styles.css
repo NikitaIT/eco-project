@@ -677,7 +677,7 @@ body {
   position: relative;
   min-height: 100%;
   background-color: #cccccc;
-  background-image: url(http://genegan.ru/ftt/47/ogni_nochnoy_gorod_razmytost_1920x1080.jpg);
+  background: url(http://genegan.ru/ftt/47/ogni_nochnoy_gorod_razmytost_1920x1080.jpg) no-repeat fixed right top;
   box-sizing: border-box;
   width: 100%;
   padding: 50px; }
