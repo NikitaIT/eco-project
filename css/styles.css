@@ -631,7 +631,7 @@ p {
   font-weight: bold;
   line-height: 1.2;
   text-align: center;
-  padding: 20px 20%; }
+  padding: 0px 20%; }
 
 a, a:hover {
   text-decoration: none; }
@@ -683,14 +683,8 @@ body {
   padding: 50px; }
 
 .page-content {
-  padding-bottom: 60px;
+  padding-bottom: 10px;
   padding-top: 0px; }
-  .page-content .content {
-    background-color: antiquewhite;
-    opacity: 0.6;
-    box-shadow: 0 0 30px black;
-    /* ╨Я╨░╤А╨░╨╝╨╡╤В╤А╤Л ╤В╨╡╨╜╨╕ */
-    padding: 10px; }
 
 figure {
   margin: 0; }
@@ -773,7 +767,17 @@ p.copyright {
   opacity: 0.9; }
 
 .content {
-  height: 200px; }
+  height: 265px;
+  padding: 0;
+  margin: 0;
+  background-color: antiquewhite;
+  opacity: 0.6;
+  box-shadow: 0 0 30px black;
+  /* ╨Я╨░╤А╨░╨╝╨╡╤В╤А╤Л ╤В╨╡╨╜╨╕ */ }
+
+.post-logo {
+  width: 100%;
+  height: auto; }
 
 /* ╨╖╨┤╨╡╤Б╤М ╨╜╨░╤Е╨╛╨┤╨╕╤В╤Б╤П ╤Б╨║╨╛╤А╨╛╤Б╤В╤М ╨┐╨╡╤А╨╡╨▓╨╡╤А╤В╤Л╨▓╨░╨╜╨╕╤П */
 .flipper {
@@ -808,7 +812,7 @@ p.copyright {
   background-color: #cd4949;
   border: 0;
   cursor: pointer;
-  margin: 20px 30px;
+  margin: 2px 15px;
   font-size: 16px;
   font-family: "RobotoCondensed";
   color: white;
