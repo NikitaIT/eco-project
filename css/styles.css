@@ -684,7 +684,7 @@ body {
 
 .page-content {
   padding-bottom: 60px;
-  padding-top: 60px; }
+  padding-top: 0px; }
   .page-content .content {
     background-color: antiquewhite;
     opacity: 0.6;
@@ -765,12 +765,12 @@ figure {
   width: 100%;
   /*footer ╨▓╨╜╨╕╨╖ ╤Б╤В╤А╨░╨╜╨╕╤Ж╤Л*/ }
   .footer p {
-    color: #0d0d0d; }
+    color: #0d0d0d;
+    padding: 0 20% 10px 20%; }
 
 p.copyright {
   text-align: center;
-  opacity: 0.9;
-  padding-top: 20px; }
+  opacity: 0.9; }
 
 .content {
   height: 200px; }

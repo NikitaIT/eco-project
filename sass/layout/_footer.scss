@@ -14,10 +14,11 @@ $yellow: yellow;
   /*footer вниз страницы*/
   p{
     color: $black-13;
+    padding: 0 20% 10px 20%;
+    
   }
 }
 p.copyright{
   text-align: center;
-  opacity: 0.9; 
-  padding-top: 20px;
+  opacity: 0.9;
 }
