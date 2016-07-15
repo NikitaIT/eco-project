@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Change the default font family in all browsers (opinionated).
@@ -364,7 +365,274 @@ textarea {
   font: inherit;
   /* 2 */ }
 
-/*normalize*/
+/*
+  Simple Grid
+  Project Page - http://thisisdallas.github.com/Simple-Grid/
+  Author - Dallas Bass
+  Site - http://dallasbass.com
+*/
+[class*='grid'],
+[class*='col-'],
+[class*='mobile-'],
+.grid:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+[class*='col-'] {
+  float: left;
+  min-height: 1px;
+  padding-right: 20px;
+  /* column-space */ }
+
+[class*='col-'] [class*='col-']:last-child {
+  padding-right: 0; }
+
+.grid {
+  width: 100%;
+  max-width: 1140px;
+  min-width: 748px;
+  /* when using padded grid on ipad in portrait mode, width should be viewport-width - padding = (768 - 20) = 748. actually, it should be even smaller to allow for padding of grid containing element */
+  margin: 0 auto;
+  overflow: hidden; }
+
+.grid:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.grid-pad {
+  padding-top: 20px;
+  padding-left: 20px;
+  /* grid-space to left */
+  padding-right: 0;
+  /* grid-space to right: (grid-space-left - column-space) e.g. 20px-20px=0 */ }
+
+.push-right {
+  float: right; }
+
+/* Content Columns */
+.col-1-1 {
+  width: 100%; }
+
+.col-2-3, .col-8-12 {
+  width: 66.66%; }
+
+.col-1-2, .col-2-4, .col-3-6, .col-4-8, .col-5-10, .col-6-12 {
+  width: 50%; }
+
+.col-1-3, .col-4-12 {
+  width: 33.33%; }
+
+.col-1-4, .col-3-12 {
+  width: 25%; }
+
+.col-1-5 {
+  width: 20%; }
+
+.col-1-6, .col-2-12 {
+  width: 16.667%; }
+
+.col-1-7 {
+  width: 14.28%; }
+
+.col-1-8 {
+  width: 12.5%; }
+
+.col-1-9 {
+  width: 11.1%; }
+
+.col-1-10 {
+  width: 10%; }
+
+.col-1-11 {
+  width: 9.09%; }
+
+.col-1-12 {
+  width: 8.33%; }
+
+/* Layout Columns */
+.col-11-12 {
+  width: 91.66%; }
+
+.col-10-12 {
+  width: 83.333%; }
+
+.col-9-12 {
+  width: 75%; }
+
+.col-5-12 {
+  width: 41.66%; }
+
+.col-7-12 {
+  width: 58.33%; }
+
+/* Pushing blocks */
+.push-2-3, .push-8-12 {
+  margin-left: 66.66%; }
+
+.push-1-2, .push-6-12 {
+  margin-left: 50%; }
+
+.push-1-3, .push-4-12 {
+  margin-left: 33.33%; }
+
+.push-1-4, .push-3-12 {
+  margin-left: 25%; }
+
+.push-1-5 {
+  margin-left: 20%; }
+
+.push-1-6, .push-2-12 {
+  margin-left: 16.667%; }
+
+.push-1-7 {
+  margin-left: 14.28%; }
+
+.push-1-8 {
+  margin-left: 12.5%; }
+
+.push-1-9 {
+  margin-left: 11.1%; }
+
+.push-1-10 {
+  margin-left: 10%; }
+
+.push-1-11 {
+  margin-left: 9.09%; }
+
+.push-1-12 {
+  margin-left: 8.33%; }
+
+@media handheld, only screen and (max-width: 767px) {
+  .grid {
+    width: 100%;
+    min-width: 0;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 20px;
+    /* grid-space to left */
+    padding-right: 10px;
+    /* grid-space to right: (grid-space-left - column-space) e.g. 20px-10px=10px */ }
+
+  [class*='col-'] {
+    width: auto;
+    float: none;
+    margin: 10px 0;
+    padding-left: 0;
+    padding-right: 10px;
+    /* column-space */ }
+
+  [class*='col-'] [class*='col-'] {
+    padding-right: 0; }
+
+  /* Mobile Layout */
+  [class*='mobile-col-'] {
+    float: left;
+    margin: 0 0 10px;
+    padding-left: 0;
+    padding-right: 10px;
+    /* column-space */
+    padding-bottom: 0; }
+
+  .mobile-col-1-1 {
+    width: 100%; }
+
+  .mobile-col-2-3, .mobile-col-8-12 {
+    width: 66.66%; }
+
+  .mobile-col-1-2, .mobile-col-6-12 {
+    width: 50%; }
+
+  .mobile-col-1-3, .mobile-col-4-12 {
+    width: 33.33%; }
+
+  .mobile-col-1-4, .mobile-col-3-12 {
+    width: 25%; }
+
+  .mobile-col-1-5 {
+    width: 20%; }
+
+  .mobile-col-1-6, .mobile-col-2-12 {
+    width: 16.667%; }
+
+  .mobile-col-1-7 {
+    width: 14.28%; }
+
+  .mobile-col-1-8 {
+    width: 12.5%; }
+
+  .mobile-col-1-9 {
+    width: 11.1%; }
+
+  .mobile-col-1-10 {
+    width: 10%; }
+
+  .mobile-col-1-11 {
+    width: 9.09%; }
+
+  .mobile-col-1-12 {
+    width: 8.33%; }
+
+  /* Layout Columns */
+  .mobile-col-11-12 {
+    width: 91.66%; }
+
+  .mobile-col-10-12 {
+    width: 83.333%; }
+
+  .mobile-col-9-12 {
+    width: 75%; }
+
+  .mobile-col-5-12 {
+    width: 41.66%; }
+
+  .mobile-col-7-12 {
+    width: 58.33%; }
+
+  .hide-on-mobile {
+    display: none !important;
+    width: 0;
+    height: 0; } }
+/* 
+* ECO Project
+* Project Page - http://myeco.city
+* Author - Fiodorov Nikita
+* Site - https://new.vk.com/handlebar
+*/
+/* base.h */
+/* 
+* used namespace normalize;
+* used namespace simplegrid;
+*/
+h2 {
+  padding-top: 40px;
+  font-size: 40px;
+  font-family: "RobotoCondensed";
+  color: #42464b;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1.2;
+  text-align: center; }
+
+h4 {
+  font-size: 22px;
+  font-family: "RobotoCondensed";
+  color: #42464b;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1.2;
+  text-align: center; }
+
+p {
+  font-size: 18px;
+  font-family: "RobotoCondensed";
+  color: #606872;
+  font-weight: bold;
+  line-height: 1.2;
+  text-align: center;
+  padding: 20px 20%; }
+
 a, a:hover {
   text-decoration: none; }
 
@@ -386,29 +654,63 @@ ul, ol {
 .right {
   float: right; }
 
+.centr {
+  display: block;
+  width: auto;
+  height: auto;
+  margin: 0 auto; }
+
 * {
   margin: 0;
   padding: 0;
   outline: none; }
+
+html,
+body {
+  height: 100%; }
 
 .container {
   margin: 0 auto;
   padding: 20px; }
 
 .wrapper {
+  position: relative;
+  min-height: 100%;
   background-color: #cccccc;
+  background-image: url(http://genegan.ru/ftt/47/ogni_nochnoy_gorod_razmytost_1920x1080.jpg);
   box-sizing: border-box;
   width: 100%;
   padding: 50px; }
 
-.mb-20 {
-  margin-bottom: 20px; }
-
-.list-row li {
-  float: right; }
+.page-content {
+  padding-bottom: 60px;
+  padding-top: 60px; }
+  .page-content .content {
+    background-color: antiquewhite;
+    opacity: 0.6;
+    box-shadow: 0 0 30px black;
+    /* ╨Я╨░╤А╨░╨╝╨╡╤В╤А╤Л ╤В╨╡╨╜╨╕ */
+    padding: 10px; }
 
 figure {
   margin: 0; }
+
+.inner-wrapper {
+  padding: 0 11%; }
+
+.blur {
+  position: absolute;
+  z-index: 99;
+  /* ╨╕╨╖╨╛╨▒╤А╨░╨╢╨╡╨╜╨╕╨╡ ╤А╨░╨╖╨╝╤Л╤В╨╛ */
+  background-image: url(http://genegan.ru/ftt/47/ogni_nochnoy_gorod_razmytost_1920x1080.jpg);
+  background-size: cover;
+  backgroun-repeat: no-repeat;
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  filter: blur(5px); }
+
+.list-row li {
+  float: right; }
 
 @media (max-width: 1110px) {
   .nav ul.right {
@@ -427,94 +729,100 @@ figure {
 
   .header-logo img {
     width: 100%; } }
-.centr {
-  display: block;
-  width: auto;
-  height: auto;
-  margin: 0 auto; }
-
 .header {
-  background-color: #f2f9fd; }
-
-.header-logo img {
-  padding: 20px; }
+  /*header ╨▓╨▓╨╡╤А╤Е ╤Б╤В╤А╨░╨╜╨╕╤Ж╤Л*/
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  /*header ╨▓╨▓╨╡╤А╤Е ╤Б╤В╤А╨░╨╜╨╕╤Ж╤Л*/
+  background-color: yellow;
+  opacity: 0.2; }
 
 .nav {
-  width: 100%; }
-
-.nav li {
-  display: inline-block;
-  padding: 35px 20px; }
-
-.nav a {
-  font-size: 14px;
-  font-family: "DINNextLTPro";
-  color: #333333;
-  text-transform: uppercase;
-  line-height: 20px;
   text-align: center; }
-
-.nav li:hover a {
-  color: #0089cf; }
-
-.nav .left li:hover {
-  border-bottom: 4px solid #0089cf; }
-
-.nav ul.right a:before {
-  display: inline-block;
-  margin-right: 10px;
-  vertical-align: 0%; }
-
-.nav ul.right [href*="cart"]:before {
-  content: url(/navigation/nav__icon/icon-cart.png); }
-
-.nav ul.right [href*="search"]:before {
-  content: url(/navigation/nav__icon/icon-search.png);
-  vertical-align: -10%; }
-
-.nav ul.right [href*="singin"]:before {
-  content: url(/navigation/nav__icon/icon-singin.png);
-  vertical-align: -10%; }
+  .nav ul {
+    width: 50%; }
+  .nav li {
+    display: inline-block; }
+    .nav li:hover a {
+      color: #0089cf; }
+  .nav a {
+    font-size: 14px;
+    font-family: "DINNextLTPro";
+    color: #333333;
+    text-transform: uppercase;
+    line-height: 20px;
+    text-align: center; }
 
 .footer {
-  background-color: #0d0d0d; }
+  background-color: yellow;
+  opacity: 0.2;
+  /*footer ╨▓╨╜╨╕╨╖ ╤Б╤В╤А╨░╨╜╨╕╤Ж╤Л*/
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  /*footer ╨▓╨╜╨╕╨╖ ╤Б╤В╤А╨░╨╜╨╕╤Ж╤Л*/ }
   .footer p {
-    color: #666666; }
-  .footer-nav {
-    padding-right: 10%; }
-    .footer-nav a {
-      font-size: 14px;
-      font-family: "DINNextLTPro";
-      color: #666666;
-      text-transform: uppercase;
-      line-height: 20px;
-      text-align: left; }
-    .footer-nav li:hover a {
-      color: #0089cf; }
-  .footer__list-row img {
-    border: 1px solid #666666;
-    width: 20px;
-    height: 20px;
-    padding: 20px;
-    margin: 10px; }
-
-.footer-logo, .footer-nav {
-  padding: 20px;
-  float: left; }
+    color: #0d0d0d; }
 
 p.copyright {
   text-align: center;
-  opacity: 0.5;
+  opacity: 0.9;
   padding-top: 20px; }
 
-.f-share input[type="text"] {
-  border: none;
-  height: 25px;
-  border-bottom: 2px solid #666666;
-  background: url(/navigation/share__icon/icon-mail.png) no-repeat;
-  background-position: 0 30%;
+.content {
+  height: 200px; }
+
+/* ╨╖╨┤╨╡╤Б╤М ╨╜╨░╤Е╨╛╨┤╨╕╤В╤Б╤П ╤Б╨║╨╛╤А╨╛╤Б╤В╤М ╨┐╨╡╤А╨╡╨▓╨╡╤А╤В╤Л╨▓╨░╨╜╨╕╤П */
+.flipper {
+  transition: 0.2s;
+  transform-style: preserve-3d;
+  position: relative; }
+
+/* ╤Б╨║╤А╨╛╨╣╤В╨╡ ╨╛╨▒╤А╨░╤В╨╜╤Г╤О ╤Б╤В╨╛╤А╨╛╨╜╤Г ╨▓╨╛ ╨▓╤А╨╡╨╝╤П ╨┐╨╡╤А╨╡╨▓╨╛╤А╨╛╤В╨░ */
+.front, .back {
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+/* ╨╗╨╕╤Ж╨╡╨▓╨░╤П ╤Б╤В╨╛╤А╨╛╨╜╨░ ╤А╨░╨╖╨╝╨╡╤Й╨╡╨╜╨░ ╨╜╨░╨┤ ╨╛╨▒╤А╨░╤В╨╜╨╛╨╣ */
+.front {
+  z-index: 2; }
+
+/* ╨╛╨▒╤А╨░╤В╨╜╨░╤П, ╨╕╨╖╨╜╨░╤З╨░╨╗╤М╨╜╨╛ ╤Б╨║╤А╤Л╤В╨░╤П ╤Б╤В╨╛╤А╨╛╨╜╨░ */
+.back {
+  transform: rotateY(180deg); }
+
+/* ╨▓╨╡╤Б╤М ╨║╨╛╨╜╤В╨╡╨╣╨╜╨╡╤А ╨┐╨╛╨┤╨┤╨╡╤А╨╢╨╕╨▓╨░╨╡╤В ╨┐╨╡╤А╤Б╨┐╨╡╨║╤В╨╕╨▓╤Г */
+.flip-container {
+  perspective: 1000; }
+
+/* ╨┐╨╡╤А╨╡╨▓╨╡╤А╨╜╨╕╤В╨╡ ╤Б╤В╨╛╤А╨╛╨╜╤Г ╨┐╤А╨╕ ╨┐╤А╨╛╨▓╨╡╨┤╨╡╨╜╨╕╨╕ ╨╝╤Л╤И╤М╤О */
+.flip-container:hover .flipper, .flip-container.hover .flipper {
+  transform: rotateY(180deg); }
+
+.btn {
+  background-color: #cd4949;
+  border: 0;
+  cursor: pointer;
+  margin: 20px 30px;
+  font-size: 16px;
+  font-family: "RobotoCondensed";
   color: white;
-  padding-left: 25px;
-  padding-bottom: 5px; }
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1.2;
+  text-align: center; }
+  .btn:hover {
+    background-color: #9b4949; }
+  .btn-normal {
+    width: 147px;
+    height: 50px; }
+  .btn-small {
+    width: 117.6px;
+    height: 40px; }
 
 /*# sourceMappingURL=styles.css.map */

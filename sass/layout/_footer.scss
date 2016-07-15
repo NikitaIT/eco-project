@@ -1,48 +1,23 @@
 $grey-102: rgb(102, 102, 102);
 $black-13: rgb(13, 13, 13);
 $light-blue: rgb(0, 137, 207);
+$yellow: yellow;
 .footer{
-  background-color: $black-13;
+  background-color: $yellow;
+  opacity: 0.2;
+  /*footer вниз страницы*/
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  //height: $footer-height; не стоит
+  /*footer вниз страницы*/
   p{
-    color: $grey-102;
+    color: $black-13;
   }
-  &-nav{
-    padding-right: 10%;
-    a{
-      font-size: 14px;
-      font-family: "DINNextLTPro";
-      color: rgb(102, 102, 102);
-      text-transform: uppercase;
-      line-height: 20px;
-      text-align: left;
-    }
-    li:hover a{
-      color: $light-blue;
-    }
-  }
-  &__list-row img{
-    border: 1px solid $grey-102;
-    width: 20px;
-    height: 20px;
-    padding: 20px;
-    margin: 10px;
-  }
-}
-.footer-logo,.footer-nav{
-  padding: 20px;
-  float: left;
 }
 p.copyright{
-  text-align: center;opacity: 0.5; 
+  text-align: center;
+  opacity: 0.9; 
   padding-top: 20px;
-}
-.f-share input[type="text"] {
-  border: none;
-  height: 25px;
-  border-bottom: 2px solid $grey-102;
-  background: url(/navigation/share__icon/icon-mail.png) no-repeat;
-  background-position: 0 30%;
-  color: white;
-  padding-left: 25px;
-  padding-bottom: 5px;
 }
